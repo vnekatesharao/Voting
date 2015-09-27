@@ -1,0 +1,53 @@
+<div class="jumbotron">
+  <h1>Voting title</h1>
+  <p class="lead">
+    Voting description...!
+  </p>
+  <div ng-controller="VotingController">
+    <div class="radio">
+      <label><input ng-click="Show()" type="radio" checked="checked" name="optradio">Yes</label>
+    </div>
+    <div class="radio">
+      <label><input ng-click="Hide()" type="radio" name="optradio">No</label>
+    </div>
+    
+    <div class="container">
+      <div ng-hide="ShowForm">
+      <h2>Answer the following questions.</h2>
+        <form role="form">
+          <div class="row">
+            <div class="form-group">            
+              <label class="col-xs-2 control-label">Pickup point</label>
+              <div class="col-xs-3 selectContainer">
+                  <select class="form-control" name="Pickuppoint">
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                      <option value="4">Four</option>
+                      <option value="5">Five</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="Phone" class="col-xs-2 control-label">Contact Number</label>
+              <div class="col-xs-3 selectContainer">
+                <input type="text" class="form-control" id="Phone">
+              </div>
+            </div>
+          </div>         
+          
+        </form>
+      </div>
+      <p>
+          <a class="btn btn-lg btn-success" ng-href="#/">
+            Yes!<span class="glyphicon glyphicon-ok"></span>
+          </a>
+          <a class="btn btn-lg btn-danger" ng-href="#/">
+            No<span class="glyphicon glyphicon-remove"></span>
+          </a>
+      </p>
+    </div>    
+  </div>
+</div>
